@@ -1,0 +1,53 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>profile data</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="firstcon">
+        <div class="contenttable"  >
+            <div class="username">
+                <h6 data-testid="slackUserName"> Bolaji Gbenga</h6>
+            </div>
+    
+            <div class="userimage">
+                <img src="images/GBENGA (5).jpg" alt="Bolaji Gbenga" data-testid="slackDisplayImage">
+            </div>
+    
+            <div class="usertrack">
+                 <h3 data-testid="mytrack" > I'm a Frontend Developer</h3> 
+            </div>
+            <div class="today">
+                <h3 data-testid="currentDayOfTheWeek" id="curdate">Today is : </h3>
+            </div>
+            <div class="utctime"> 
+                <h3 class="fp" data-testid="currentDayOfTheWeek"> Time in UTC :</h3>
+                <h3  class="cu" id="currentUTCTime" data-testid="currentUTCTime"></h3>
+            </div>
+    
+            <div class="gitlink">
+                <a data-testid="githubURL" href="https://github.com/gtech2000/Hng-project">GithubURL</a>
+            </div>
+        </div>
+     
+    </div>
+   
+    <script>
+        const currentUTCTime = new Date().getTime();
+
+        const element = document.getElementById("currentUTCTime");
+        element.innerText = currentUTCTime;
+        element.setAttribute("data-testid", "currentUTCTime");
+
+
+        const myDate = new Date()
+        const dayslist = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+
+        const today = document.getElementById('curdate');
+        today.innerText += dayslist[myDate.getDay()]; 
+    </script>
+
+</body>
+</html>
