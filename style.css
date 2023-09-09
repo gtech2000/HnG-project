@@ -85,4 +85,12 @@ h3{
   
     
     
+}.images{
+    width: 180px;
+    height: auto;
+    
+}
+.git{
+    border:solid;
+    border-bottom: 20px;
 }
